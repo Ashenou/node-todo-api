@@ -40,5 +40,13 @@ db.collection(`Users`).find({name:`Diesel`}).count().then((count)=>{
     (err)=>{
     console.log(err);
 });
+
+db.collection(`Todos`).deleteMany({name:`have dinner`}).then(
+    (res)=>{
+        console.log(res);
+    },
+    (err) =>{
+        console.log(err);
+    });
 client.close();
 });
